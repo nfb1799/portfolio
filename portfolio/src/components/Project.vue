@@ -1,14 +1,20 @@
 <template>
   <div>
     <v-row>
-      <v-col cols="6">
+      <v-col
+        :class="platform === 'mobile' ? 'pb-0' : ''"
+        :cols="platform === 'mobile' ? 12 : 5"  
+      >
         <img
           :src="imageSrc"
           style="width: 100%;"
         >
       </v-col>
-      <v-col cols="6">
-        <v-row>
+      <v-col
+        :class="platform === 'mobile' ? 'pt-0 mb-8' : 'pr-8'"
+        :cols="platform === 'mobile' ? 12 : 7"  
+      >
+        <v-row class="mb-4">
           <a :href="link">
             <h1>
               {{ title }}
@@ -36,6 +42,7 @@
 </template>
 
 <script>
+import Bowser from 'bowser'
 export default {
   name: 'Project',
   props: {
@@ -47,6 +54,11 @@ export default {
     roles: String,
     learningOutcomes: String,
     challenges: String,
+  },
+  computed: {
+    platform () {
+      return Bowser.getParser(window.navigator.userAgent).getPlatformType()
+    },
   }
 }
 </script>

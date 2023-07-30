@@ -2,9 +2,9 @@
   <v-sheet
     id="home-sheet"
     color="black"
-    style="height: 100$;"
+    style="height: 100%;"
   >
-    <v-row v-if="platform !== 'mobile'">
+    <v-row v-if="platform !== 'mobile'" class="fill-height">
       <v-col
         cols="5"
         style="display: flex; justify-content: center;"

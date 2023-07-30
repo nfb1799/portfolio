@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="background-color: #d4d4d4;">
     <project
       v-for="(project, i) in projects"
       :key="i"
