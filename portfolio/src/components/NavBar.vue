@@ -17,7 +17,6 @@
     >
       Home
     </v-btn>
-    
     <v-btn
       v-if="platform !== 'mobile'"
       style="height: 100%;"
@@ -25,21 +24,12 @@
     >
       Gallery
     </v-btn>
-    
     <v-btn
       v-if="platform !== 'mobile'"
       style="height: 100%;"
       @click="$router.push({ path: '/resume' })"
     >
       Resume
-    </v-btn>
-    
-    <v-btn
-      v-if="platform !== 'mobile'"
-      style="height: 100%;"
-      @click="$router.push({ path: '/contact' })"
-    >
-      Contact
     </v-btn>
     <v-menu v-if="platform === 'mobile'">
       <template v-slot:activator="{ props }">
@@ -72,14 +62,6 @@
             @click="$router.push({ path: '/resume' })"
           >
             Resume
-          </v-btn>
-        </v-list-item>
-        <v-list-item class="pa-0">
-          <v-btn
-            style="height: 100%; width: 100%"
-            @click="$router.push({ path: '/contact' })"
-          >
-            Contact
           </v-btn>
         </v-list-item>
       </v-list>
