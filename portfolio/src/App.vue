@@ -15,8 +15,4 @@ import NavBar from './components/NavBar.vue'
 </script>
 
 <style>
-#app {
-  display: flex;
-  margin: 0;
-}
 </style>
