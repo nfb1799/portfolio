@@ -92,7 +92,6 @@ import { computed } from 'vue'
 import Bowser from 'bowser'
 
 const platform = computed(() => {
-  console.log(Bowser.getParser(window.navigator.userAgent).getPlatformType())
   return Bowser.getParser(window.navigator.userAgent).getPlatformType()
 })
 </script>
