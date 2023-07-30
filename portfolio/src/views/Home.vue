@@ -4,7 +4,7 @@
     color="black"
     style="height: 100$;"
   >
-    <v-row>
+    <v-row v-if="platform !== 'mobile'">
       <v-col
         cols="5"
         style="display: flex; justify-content: center;"
@@ -40,6 +40,43 @@
             </v-col>
           </v-row>
         </v-card>
+      </v-col>
+    </v-row>
+    <v-row v-else>
+      <v-col
+        cols="12"
+        style="display: flex; justify-content: center;"  
+      >
+        <v-card
+          id="about-me"
+          color="transparent"
+        >
+          <v-row>
+            <v-col 
+              cols="12"
+            >
+              <h3 style="font-weight: bold; font-size: 1.5em">Web Developer seeking career opportunities</h3>
+            </v-col>
+            <v-col
+              cols="12"
+            >
+              <h4 style="font-weight: bold;">
+                I graduated Summa Cum Laude with a degree in Game Design and Development from Rochester Institute of Technology. 
+                I enjoy solving coding puzzles and seeing my ideas come to fruition in the form of web functionality. 
+                I have been working as a vue developer since I graduated am always seeking advancement opportunities.
+              </h4>
+            </v-col>
+          </v-row>
+        </v-card>
+      </v-col>
+      <v-col
+        cols="12"
+        style="display: flex; justify-content: center;"
+      >
+        <img
+          style="width: 100%;"
+          src="../assets/self.png"
+        >
       </v-col>
     </v-row>
   </v-sheet>

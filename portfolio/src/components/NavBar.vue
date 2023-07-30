@@ -3,7 +3,10 @@
     id="nav-bar"
     color="black"
   >
-    <v-app-bar-title style="text-align: center; font-size: 2em;">
+    <v-app-bar-title
+      :class="platform === 'mobile' ? 'mr-6' : ''"
+      :style="platform === 'mobile' ? 'font-size: 1.8em;' : 'text-align: center; font-size: 2em;'"
+    >
       Nik Barbero
     </v-app-bar-title>
     <v-spacer v-if="platform !== 'mobile'" />
