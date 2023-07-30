@@ -5,21 +5,54 @@
     style="height: 100$;"
   >
     <v-row>
-      <v-col cols="6">
+      <v-col
+        cols="5"
+        style="display: flex; justify-content: center;"
+      >
         <img
           src="../assets/self.png"
         >
       </v-col>
-      <v-col cols="6">
-        <v-card>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, eius? Libero sint officia dicta tempore fuga fugit omnis quo et magni quam, illum ut temporibus doloremque sed. Dolores, rerum voluptas!
+      <v-col
+        cols="7"
+        style="display: flex; justify-content: center;"  
+      >
+        <v-card
+          id="about-me"
+          color="transparent"
+        >
+          <v-row class="pt-10">
+            <v-col
+              class="mb-10"  
+              cols="12"
+            >
+              <h1 style="font-weight: bold; font-size: 2.5em;">Web Developer seeking career opportunities</h1>
+            </v-col>
+            <v-col
+              class="pr-10"
+              cols="12"
+            >
+              <h2 style="font-weight: bold;">
+                I graduated Summa Cum Laude with a degree in Game Design and Development from Rochester Institute of Technology. 
+                I enjoy solving coding puzzles and seeing my ideas come to fruition in the form of web functionality. 
+                I have been working as a vue developer since I graduated am always seeking advancement opportunities.
+              </h2>
+            </v-col>
+          </v-row>
         </v-card>
       </v-col>
     </v-row>
   </v-sheet>
 </template>
 
-<script>
+<script setup>
+import { computed } from 'vue'
+import Bowser from 'bowser'
+
+const platform = computed(() => {
+  console.log(Bowser.getParser(window.navigator.userAgent).getPlatformType())
+  return Bowser.getParser(window.navigator.userAgent).getPlatformType()
+})
 </script>
 
 <style>
