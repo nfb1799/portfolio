@@ -7,6 +7,10 @@
   font-weight: normal;
 }
 
+.v-row {
+  margin: 0 !important;
+}
+
 a,
 .green {
   text-decoration: none;
