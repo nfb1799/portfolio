@@ -82,4 +82,13 @@ const platform = computed(() => {
 .v-list-item__content {
   height: 100%;
 }
+
+/* Custom nav button hover effect */
+.v-btn {
+  transition: box-shadow 0.18s, background 0.18s, color 0.18s, transform 0.18s;
+}
+.v-btn:hover, .v-btn:focus-visible {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  transform: translateY(-2px) scale(1.04);
+}
 </style>

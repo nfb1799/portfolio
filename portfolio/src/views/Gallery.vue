@@ -1,17 +1,26 @@
 <template>
-  <div style="background-color: #d4d4d4;">
-    <project
-      v-for="(project, i) in projects"
-      :key="i"
-      :title="project.title"
-      :link="project.link"
-      :imageSrc="project.imageSrc"
-      :description="project.description"
-      :technologies="project.technologies"
-      :roles="project.roles"
-      :learningOutcomes="project.learningOutcomes"
-      :challenges="project.challenges"
-    />
+  <div style="background-color: #d4d4d4; padding: 24px;">
+    <v-row dense>
+      <v-col
+        v-for="(project, i) in projects"
+        :key="i"
+        cols="12"
+        sm="6"
+        md="4"
+        class="d-flex align-stretch pa-2"
+      >
+        <project
+          :title="project.title"
+          :link="project.link"
+          :imageSrc="project.imageSrc"
+          :description="project.description"
+          :technologies="project.technologies"
+          :roles="project.roles"
+          :learningOutcomes="project.learningOutcomes"
+          :challenges="project.challenges"
+        />
+      </v-col>
+    </v-row>
   </div>
 </template>
 
