@@ -21,11 +21,22 @@ import Blob from '../assets/blob.png'
 import Ptcg from '../assets/ptcg.png'
 import Snake from '../assets/snake.png'
 import Project from '../components/Project.vue'
+import EmojiReact from '../assets/emoji-react.png'
 export default {
   components: {Project},
   data () {
     return {
       projects: [
+        {
+          title: 'Emoji Games - React',
+          link: 'https://nfb1799.github.io/emoji-games-react/',
+          imageSrc: EmojiReact,
+          description: 'A collection of games built with React that utilize emojis as the core assets.',
+          technologies: 'React.js, JavaScript, HTML/CSS',
+          roles: 'Nik Barbero developed this app by himself',
+          learningOutcomes: 'A better understanding of React.js and its component-based architecture. I also learned how to manage state and props effectively in a React application.',
+          challenges: 'Implementing responsive layouts so the games work well on both desktop and mobile devices.',
+        },
         {
           title: 'Blob-Blob Game',
           link: 'https://telepathicgrunt.itch.io/blob-blob-game',
