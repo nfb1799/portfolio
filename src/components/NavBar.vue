@@ -17,7 +17,6 @@
     >
       Home
     </v-btn>
-    
     <v-btn
       v-if="platform !== 'mobile'"
       style="height: 100%;"
@@ -25,21 +24,12 @@
     >
       Gallery
     </v-btn>
-    
     <v-btn
       v-if="platform !== 'mobile'"
       style="height: 100%;"
       @click="$router.push({ path: '/resume' })"
     >
       Resume
-    </v-btn>
-    
-    <v-btn
-      v-if="platform !== 'mobile'"
-      style="height: 100%;"
-      @click="$router.push({ path: '/contact' })"
-    >
-      Contact
     </v-btn>
     <v-menu v-if="platform === 'mobile'">
       <template v-slot:activator="{ props }">
@@ -74,14 +64,6 @@
             Resume
           </v-btn>
         </v-list-item>
-        <v-list-item class="pa-0">
-          <v-btn
-            style="height: 100%; width: 100%"
-            @click="$router.push({ path: '/contact' })"
-          >
-            Contact
-          </v-btn>
-        </v-list-item>
       </v-list>
     </v-menu>
   </v-app-bar>
@@ -99,5 +81,14 @@ const platform = computed(() => {
 <style>
 .v-list-item__content {
   height: 100%;
+}
+
+/* Custom nav button hover effect */
+.v-btn {
+  transition: box-shadow 0.18s, background 0.18s, color 0.18s, transform 0.18s;
+}
+.v-btn:hover, .v-btn:focus-visible {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  transform: translateY(-2px) scale(1.04);
 }
 </style>

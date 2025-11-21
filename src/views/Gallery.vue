@@ -1,17 +1,26 @@
 <template>
-  <div style="background-color: #d4d4d4;">
-    <project
-      v-for="(project, i) in projects"
-      :key="i"
-      :title="project.title"
-      :link="project.link"
-      :imageSrc="project.imageSrc"
-      :description="project.description"
-      :technologies="project.technologies"
-      :roles="project.roles"
-      :learningOutcomes="project.learningOutcomes"
-      :challenges="project.challenges"
-    />
+  <div style="background-color: #d4d4d4; padding: 24px;">
+    <v-row dense>
+      <v-col
+        v-for="(project, i) in projects"
+        :key="i"
+        cols="12"
+        sm="6"
+        md="4"
+        class="d-flex align-stretch pa-2"
+      >
+        <project
+          :title="project.title"
+          :link="project.link"
+          :imageSrc="project.imageSrc"
+          :description="project.description"
+          :technologies="project.technologies"
+          :roles="project.roles"
+          :learningOutcomes="project.learningOutcomes"
+          :challenges="project.challenges"
+        />
+      </v-col>
+    </v-row>
   </div>
 </template>
 
@@ -19,13 +28,35 @@
 import Alpine from '../assets/alpine.png'
 import Blob from '../assets/blob.png'
 import Ptcg from '../assets/ptcg.png'
+import Ptcg2 from '../assets/ptcg.jpg'
 import Snake from '../assets/snake.png'
 import Project from '../components/Project.vue'
+import EmojiReact from '../assets/emoji-react.png'
 export default {
   components: {Project},
   data () {
     return {
       projects: [
+        {
+          title: 'Pokémon TCG Search',
+          link: 'https://nfb1799.github.io/pokemon-tcg-search/',
+          imageSrc: Ptcg2,
+          description: 'A React-based Pokémon TCG search application that queries the Pokemon TCG API to provide card images and current pricing information. Users can search for cards and view market values.',
+          technologies: 'React, JavaScript',
+          roles: 'Nik Barbero developed this app by himself',
+          learningOutcomes: 'Advanced React development skills including state management, API integration, and handling real-time pricing data. Also gained experience working with external trading card game APIs.',
+          challenges: 'Integrating multiple data sources for comprehensive card information and pricing was complex. Managing API rate limits and ensuring data accuracy across different pricing sources required careful implementation.',
+        },
+        {
+          title: 'Emoji Games - React',
+          link: 'https://nfb1799.github.io/emoji-games-react/',
+          imageSrc: EmojiReact,
+          description: 'A collection of games built with React that utilize emojis as the core assets.',
+          technologies: 'React.js, JavaScript, HTML/CSS',
+          roles: 'Nik Barbero developed this app by himself',
+          learningOutcomes: 'A better understanding of React.js and its component-based architecture. I also learned how to manage state and props effectively in a React application.',
+          challenges: 'Implementing responsive layouts so the games work well on both desktop and mobile devices.',
+        },
         {
           title: 'Blob-Blob Game',
           link: 'https://telepathicgrunt.itch.io/blob-blob-game',

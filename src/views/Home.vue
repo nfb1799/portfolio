@@ -35,7 +35,7 @@
               <h2 style="font-weight: bold;">
                 I graduated Summa Cum Laude with a degree in Game Design and Development from Rochester Institute of Technology. 
                 I enjoy solving coding puzzles and seeing my ideas come to fruition in the form of web functionality. 
-                I have been working as a vue developer since I graduated am always seeking advancement opportunities.
+                I have been working as a vue developer since I graduated and am always seeking advancement opportunities.
               </h2>
             </v-col>
           </v-row>
@@ -63,7 +63,7 @@
               <h4 style="font-weight: bold;">
                 I graduated Summa Cum Laude with a degree in Game Design and Development from Rochester Institute of Technology. 
                 I enjoy solving coding puzzles and seeing my ideas come to fruition in the form of web functionality. 
-                I have been working as a vue developer since I graduated am always seeking advancement opportunities.
+                I have been working as a vue developer since I graduated and am always seeking advancement opportunities.
               </h4>
             </v-col>
           </v-row>
